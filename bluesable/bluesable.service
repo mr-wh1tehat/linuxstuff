@@ -1,0 +1,9 @@
+[Unit]
+Description=Disabling bluetooth daemon at boot
+
+[Service]
+Type=simple
+ExecStart=/usr/sbin/rfkill block bluetooth
+
+[Install]
+WantedBy=default.target
